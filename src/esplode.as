@@ -79,7 +79,7 @@ package
       var ellipse:Sprite = new Sprite();
     
       ellipse.graphics.beginFill(colorArray[randomColor]);
-      ellipse.graphics.drawCircle(Math.random()*1000, Math.random()*1000, 100c);    
+      ellipse.graphics.drawCircle(Math.random()*1000, Math.random()*1000, 100);    
     
       ellipse.alpha = 1;
       ellipse.scaleX = 0;
