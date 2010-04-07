@@ -30,28 +30,20 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-package
-{
-
+package{
   import flash.events.*;
   import flash.display.*;
   import flash.utils.*;
   import caurina.transitions.Tweener;
 
-  public class esplode extends Sprite
-  {
-  
-    /**
-     * @constructor
-     */
-    public function esplode()
-    {
+  public class esplode extends Sprite{
+
+    public function esplode(){
       super();
       stage.addEventListener( Event.ENTER_FRAME, initialize );
     }
   
-    private function initialize(event:Event):void
-    {
+    private function initialize(event:Event):void{
       stage.removeEventListener( Event.ENTER_FRAME, initialize );    
     
       stage.addEventListener(MouseEvent.MOUSE_MOVE, function(){
@@ -69,11 +61,9 @@ package
         }, 5000);
       
       });
-
     }
   
-    public function generateCircle():Sprite
-    {
+    public function generateCircle():Sprite{
       var colorArray:Array = new Array(0xFFFF33, 0xFFFFFF, 0x79DCF4, 0xFF3333, 0xFFCC33, 0x99CC33);
       var randomColor:Number = Math.floor(Math.random()*colorArray.length);
       var ellipse:Sprite = new Sprite();
@@ -84,8 +74,8 @@ package
       ellipse.alpha = 1;
       ellipse.scaleX = 0;
       ellipse.scaleY = 0;
+      
       return ellipse;
     }
   }
-
 }
